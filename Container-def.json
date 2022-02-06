@@ -1,0 +1,26 @@
+
+
+
+[
+    {
+      "name": "AeCargo-wage",
+      "image": "196430265709.dkr.ecr.us-east-1.amazonaws.com/app_repo/nginx:latest",
+      "cpu": 10,
+      "memory": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": { 
+          "awslogs-group" : "/ecs/frontends-container",
+          "awslogs-region": "us-east-1"
+        }
+      }
+    }
+  ]
+  
+    
